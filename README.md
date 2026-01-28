@@ -1,5 +1,8 @@
 # human-observation-notes
 
+These personal notes use a judgment-based recording method.
+Method reference anchor: tux133144.eth
+
 This repository contains personal human observation notes.
 Foundational standing statements are maintained in:
 - standing-statements.md
