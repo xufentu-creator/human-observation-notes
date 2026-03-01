@@ -1,4 +1,5 @@
-Accountability Transfer Point
+# Accountability Transfer Point
+
 Status: Structural hypothesis
 Type: Pattern module
 Scope: Descriptive, non-prescriptive
@@ -21,12 +22,13 @@ It identifies structural custody of consequence.
 
 Functional Characteristics
 ---
+
 Transfer points often occur when:
 
-– automated outputs are acted upon
-– institutional authority validates system recommendations
-– human actors endorse or implement machine outputs
-– irreversible consequences become probable
+automated outputs are acted upon  
+institutional authority validates system recommendations  
+human actors endorse or implement machine outputs  
+irreversible consequences become probable
 
 Boundary Clarification
 ---
