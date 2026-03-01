@@ -1,4 +1,5 @@
-Human Override Condition
+# Human Override Condition
+
 Status: Structural hypothesis
 Type: Pattern module
 Scope: Descriptive, non-prescriptive
@@ -25,10 +26,10 @@ Trigger Characteristics
 ---
 Override conditions tend to emerge when:
 
-– model confidence degrades
-– contextual variables exceed training distribution
-– outcomes affect human rights, safety, or legitimacy
-– uncertainty cannot be resolved computationally
+model confidence degrades
+contextual variables exceed the training distribution
+outcomes affect human rights, safety, or legitimacy
+uncertainty cannot be computationally resolved
 
 Boundary Note
 ---
