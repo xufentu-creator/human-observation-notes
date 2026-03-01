@@ -1,12 +1,13 @@
 # human-observation-notes
 
-These personal notes use a judgment-based recording method.
-Method reference anchor: tux133144.eth
+This repository contains structural pattern modules and observation notes related to human-centered AI governance and complex decision environments.
 
-This repository contains personal human observation notes.
+All materials are descriptive and non-prescriptive.
+
+Core structural modules are maintained in the /patterns directory.
+
 Foundational standing statements are maintained in:
-- standing-statements.md
----
-2025-12-31.md — 年末阶段，判断与停下
 
-2026-01-04__explanation-fading.md — 解释开始退场
+standing-statements.md
+
+Daily field observations are recorded in the /daily directory.
