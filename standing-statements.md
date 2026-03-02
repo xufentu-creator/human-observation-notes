@@ -1,3 +1,5 @@
+Version: v1.0
+
 # Human Sovereignty & Boundary Reference  
 ## Non-Replicable · Non-Trainable · Human-Machine Boundary
 
@@ -49,7 +51,7 @@ Its function is **reference, not control**.
 
 ---
 
-## 4. Core Invariants (Non-Negotiable)
+## 4. Core Invariants
 
 The following principles are **structural invariants**.
 They are not design preferences and are not subject to optimization.
@@ -142,7 +144,7 @@ This repository establishes:
 - a continuous authorship timeline,
 - non-transferable responsibility.
 
-Identity references (e.g., ENS or equivalent systems)
+Identity references 
 serve **only** for provenance verification,
 not for execution authority or enforcement.
 
@@ -211,3 +213,4 @@ for judgment, responsibility, and choice.
 
 **Human judgment is not a feature.  
 It is a condition of responsibility.**
+
