@@ -2,6 +2,7 @@ Decision Interface Boundary
 ---
 Status: Structural hypothesis
 Type: Pattern module
+
 Scope: Descriptive, non-prescriptive
 Domain: Human-centered AI governance / Complex systems
 
