@@ -1,22 +1,19 @@
 # human-observation-notes
 
-Research notes on AI Governance, Complex Systems, and Human Judgment.
+Research notes by **Xufen Tu** on human judgment, AI governance, complex systems, and decision environments.
 
----
+This repository records observations drawn from real situations in which people, organizations, and automated systems interact. The notes focus on how judgment forms, how responsibility becomes unclear, how systems influence behavior, and how people respond when information, speed, and uncertainty increase at the same time.
 
-This repository contains structural pattern modules and observation notes within the fields of Complex Systems and AI Governance.
+The materials in this repository are descriptive research records rather than operational instructions. They do not provide complete methodologies, scoring systems, implementation procedures, professional advice, or automated decision authority.
 
-All materials are descriptive and non-prescriptive.
+Long-form field observations are maintained in the [`/daily`](./daily) directory. Public standing statements and research boundaries are maintained in [`standing-statements.md`](./standing-statements.md). Any materials published in [`/patterns`](./patterns) are limited to public conceptual descriptions; detailed methods, tools, validation structures, and implementation materials are maintained privately.
 
-Core decision-architecture modules are maintained in the /patterns directory.
+Canonical public research reference:
 
-Foundational standing statements are maintained in:
+https://xufentu.com
 
-standing-statements.md
+Author:
 
-Daily field observations are recorded in the /daily directory.
-
----
-
-Primary research repository:
-https://github.com/xufentu-creator/judgment-as-structural-constraint
+**Xufen Tu（涂绪芬）**
+Independent Interdisciplinary Researcher
+AI Governance · Complex Systems · Decision Architecture · Human Judgment
