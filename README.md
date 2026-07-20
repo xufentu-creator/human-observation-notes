@@ -1,19 +1,40 @@
 # human-observation-notes
 
-Research notes by **Xufen Tu** on human judgment, AI governance, complex systems, and decision environments.
+Research notes by **Xufen Tu** on Human Judgment, AI Governance, Complex Systems, Decision Architecture, and changing decision environments.
 
-This repository records observations drawn from real situations in which people, organizations, and automated systems interact. The notes focus on how judgment forms, how responsibility becomes unclear, how systems influence behavior, and how people respond when information, speed, and uncertainty increase at the same time.
+This repository records observations drawn from real situations in which people, organizations, digital platforms, and automated systems interact. The notes examine how judgment forms, how responsibility can become unclear, how surrounding structures influence behavior, and how people respond when information, speed, and uncertainty increase at the same time.
 
-The materials in this repository are descriptive research records rather than operational instructions. They do not provide complete methodologies, scoring systems, implementation procedures, professional advice, or automated decision authority.
+The materials in this repository are descriptive public research records rather than operational instructions. They do not provide complete methodologies, scoring systems, implementation procedures, professional advice, or automated decision authority.
 
-Long-form field observations are maintained in the [`/daily`](./daily) directory. Public standing statements and research boundaries are maintained in [`standing-statements.md`](./standing-statements.md). Any materials published in [`/patterns`](./patterns) are limited to public conceptual descriptions; detailed methods, tools, validation structures, and implementation materials are maintained privately.
+## Repository Contents
 
-Canonical public research reference:
+| Location | Content |
+|---|---|
+| [`daily/`](./daily/) | Field observations and shorter research notes arising from everyday situations |
+| [`research-context/`](./research-context/) | Longer contextual writing and chapter-style research reflections |
+| [`patterns/`](./patterns/) | Limited public descriptions of recurring observable patterns |
+| [`standing-statements.md`](./standing-statements.md) | Stable public research positions and research boundaries |
 
+## Research Context
+
+The continuing themes reflected in these notes include:
+
+**Human Judgment · AI Governance · Complex Systems · Decision Architecture · Enterprise Transformation · Responsibility Boundaries · Provenance**
+
+These themes appear through observation-based writing and are not presented here as a complete system or finished theory.
+
+## Canonical Public Research Reference
+
+For the author’s public research profile, publications, and continuing research record:
+
+**Official Website**  
 https://xufentu.com
 
-Author:
+**Canonical Research Identity Repository**  
+https://github.com/xufentu-creator/xufentu-human-judgment
 
-**Xufen Tu（涂绪芬）**
-Independent Interdisciplinary Researcher
+## Author
+
+**Xufen Tu（涂绪芬）**  
+Independent Interdisciplinary Researcher  
 AI Governance · Complex Systems · Decision Architecture · Human Judgment
