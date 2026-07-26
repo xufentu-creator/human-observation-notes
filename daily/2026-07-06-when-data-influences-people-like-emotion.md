@@ -1,6 +1,5 @@
 # 2026-07-06｜当数据像情绪一样影响人
 
-## 中文版本
 
 今天写了几首歌，听到 AI 写出来的曲子，忽然觉得很好听。工作了一整天以后，偶尔让自己从文件、系统、网页、仓库和文字里退出来，听一段旋律，好像人的心会稍微松一点。音乐很奇妙，它不需要解释太多，却能很快触碰到人的情绪。一个旋律起来，人的心情就会跟着动。明明刚才还在处理很理性的事情，下一秒可能就被一段声音带到很多年前，想起一些人、一些路、一些没有说完的话。
 
@@ -89,8 +88,6 @@ AI 时代真正需要建立的，不是完全隔离数据，而是让人和系�
 未来真正重要的能力，可能是既能接触世界，又不被世界带走。
 
 # July 6, 2026｜When Data Influences People Like Emotion
-
-## English Version
 
 Today I wrote several songs and listened to music generated with AI. Some of the melodies were surprisingly beautiful. After working for an entire day, stepping away from files, systems, webpages, repositories, and text for a while felt like a small form of relief. Music is strange. It does not need much explanation, yet it can touch human emotion very quickly. A melody begins, and the heart moves with it. One moment a person may be dealing with something highly rational, and the next moment a sound can carry them back many years, toward certain people, certain roads, and certain words that were never fully spoken.
 
