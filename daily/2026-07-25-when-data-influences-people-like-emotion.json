@@ -1,0 +1,119 @@
+```json
+{
+  "record_type": "AI-Era Structural Note",
+  "record_status": "public_research_diary_metadata",
+  "visibility": "public",
+  "language_structure": "zh-CN first, en mirror second",
+  "created_date": "2026-07-06",
+  "updated_date": "2026-07-06",
+  "file_name": "2026-07-06-when-data-influences-people-like-emotion.md",
+  "title": {
+    "zh-CN": "当数据像情绪一样影响人",
+    "en": "When Data Influences People Like Emotion"
+  },
+  "author": {
+    "name": "Xufen Tu",
+    "chinese_name": "涂绪芬",
+    "role": "Independent Interdisciplinary Researcher in AI Governance & Complex Systems",
+    "canonical_public_research_source": "https://xufentu.com"
+  },
+  "series": {
+    "name": "AI-Era Structural Notes",
+    "chinese_name": "AI 时代结构观察",
+    "description": {
+      "zh-CN": "记录 AI 时代语言、数据、情绪、责任、判断与系统变化中的结构性问题。",
+      "en": "Observations on structural changes in language, data, emotion, responsibility, judgment, and systems in the AI era."
+    }
+  },
+  "core_observation": {
+    "zh-CN": "情绪会感染人，数据也会感染人。AI 时代真正需要建立的，不是完全隔离数据，而是让人和系统在接触数据时仍然保留距离、判断和确认。",
+    "en": "Emotion can affect people, and data can affect people too. What the AI era needs is not complete isolation from data, but the ability for people and systems to maintain distance, judgment, and confirmation while coming into contact with data."
+  },
+  "core_claims": [
+    {
+      "zh-CN": "数据可以帮助理解世界，但不能自动接管行动。",
+      "en": "Data can help people understand the world, but it must not automatically take over action."
+    },
+    {
+      "zh-CN": "情绪可以提醒人哪里重要，但不能直接决定后果。",
+      "en": "Emotion can remind people what matters, but it must not directly determine consequences."
+    },
+    {
+      "zh-CN": "数据被看见，不等于它可以直接决定行动。",
+      "en": "Data being seen does not mean it can directly determine action."
+    },
+    {
+      "zh-CN": "生成流畅不等于思想对齐，数据丰富不等于结论正确。",
+      "en": "Fluent generation does not mean thought alignment, and rich data does not mean the conclusion is correct."
+    },
+    {
+      "zh-CN": "未来真正重要的能力，可能是既能接触世界，又不被世界带走。",
+      "en": "A future human capability may be the ability to contact the world without being carried away by it."
+    }
+  ],
+  "research_context": {
+    "primary_fields": [
+      "Complex Systems",
+      "AI Governance",
+      "Decision Architecture",
+      "Enterprise Transformation",
+      "Human Judgment"
+    ],
+    "secondary_tags": [
+      "AI-Era Structural Notes",
+      "Data Contact Boundary",
+      "Emotional Contagion",
+      "Judgment Boundary",
+      "Decision Architecture",
+      "Responsibility Drift",
+      "Meaningful Confirmation",
+      "Data Influence",
+      "Human Attention",
+      "Structural Protection"
+    ]
+  },
+  "related_research_themes": [
+    "Human judgment before execution",
+    "Data influence and attention shaping",
+    "Emotion as a metaphor for data contagion",
+    "Boundary between contact and control",
+    "AI-generated fluency and human confirmation",
+    "Responsibility drift in data-mediated systems"
+  ],
+  "public_boundary": {
+    "methodology_disclosure": false,
+    "tool_design_disclosure": false,
+    "internal_workflow_disclosure": false,
+    "commercial_strategy_disclosure": false,
+    "safe_public_summary": true,
+    "boundary_note": {
+      "zh-CN": "该记录只保存公开研究观察、核心问题和语义标签，不公开内部方法论、工具流程或系统实现方式。",
+      "en": "This record preserves only public research observation, core issues, and semantic tags. It does not disclose internal methodology, tool workflows, or system implementation."
+    }
+  },
+  "canonical_statements": [
+    {
+      "zh-CN": "判断先于动量。",
+      "en": "Judgment must precede technological momentum."
+    },
+    {
+      "zh-CN": "数据可以被接触，但不能直接接管判断。",
+      "en": "Data may be contacted, but it must not directly take over judgment."
+    },
+    {
+      "zh-CN": "语言不等于执行，表达不等于授权，记录不等于确认。",
+      "en": "Language is not execution, expression is not authorization, and record is not confirmation."
+    },
+    {
+      "zh-CN": "没有有意义的本人确认，就没有个人责任。",
+      "en": "No meaningful personal confirmation, no personal responsibility."
+    }
+  ],
+  "canonical_public_research_reference": {
+    "author": "Xufen Tu（涂绪芬）",
+    "research_identity": "Independent Interdisciplinary Researcher in AI Governance & Complex Systems",
+    "research_framework": "Human Judgment as Structural Constraint in AI-Mediated Complex Systems",
+    "canonical_source": "https://xufentu.com"
+  }
+}
+```
