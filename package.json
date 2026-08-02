@@ -1,0 +1,12 @@
+{
+  "name": "human-observation-notes",
+  "private": true,
+  "version": "1.2.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
