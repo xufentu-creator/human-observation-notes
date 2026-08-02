@@ -1,7 +1,0 @@
-{
-  "name": "human-observation-notes",
-  "private": true,
-  "version": "1.1.0",
-  "type": "module",
-  "scripts": {"build": "node scripts/build.mjs"}
-}
