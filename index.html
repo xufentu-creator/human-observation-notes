@@ -1,23 +1,34 @@
-(() => {
-'use strict';
-const C=window.SITE_CONFIG,app=document.getElementById('app'),progress=document.getElementById('reading-progress');
-const api=`https://api.github.com/repos/${C.owner}/${C.repo}`,raw=`https://raw.githubusercontent.com/${C.owner}/${C.repo}/${C.branch}`;
-const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-const dateFromName=n=>{const m=n.match(/(20\d{2})[-_](\d{2})[-_](\d{2})/);return m?`${m[1]}-${m[2]}-${m[3]}`:''};
-const cleanName=n=>n.replace(/\.(md|markdown)$/i,'').replace(/^\s*20\d{2}[-_]\d{2}[-_]\d{2}[a-z]?[-_]*/i,'').replace(/[-_]+/g,' ').replace(/\s+/g,' ').trim()||n;
-function parseFM(md){if(!md.startsWith('---'))return{meta:{},body:md};const end=md.indexOf('\n---',3);if(end<0)return{meta:{},body:md};const meta={};for(const line of md.slice(3,end).trim().split('\n')){const i=line.indexOf(':');if(i>0)meta[line.slice(0,i).trim()]=line.slice(i+1).trim().replace(/^['"]|['"]$/g,'')}return{meta,body:md.slice(end+4).trim()}}
-function titleOf(md,fallback){const {meta,body}=parseFM(md),h=body.match(/^#\s+(.+)$/m);return meta.title||(h&&h[1].trim())||fallback}
-function fixImages(md,path){const base=path.split('/').slice(0,-1).join('/');return md.replace(/!\[([^\]]*)\]\((?!https?:|data:|\/)([^)]+)\)/g,(_,a,u)=>`![${a}](${raw}/${base}/${u.replace(/^\.\//,'')})`)}
-function readingMinutes(text){return Math.max(1,Math.ceil(text.replace(/[#>*_`\[\]()\-]/g,'').length/500))}
-async function sha256(text){const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text));return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,'0')).join('')}
-async function files(){const r=await fetch(`${api}/contents/${C.contentDir}?ref=${C.branch}`);if(!r.ok)throw new Error('无法读取公开记录。请稍后重试。');const data=await r.json();return data.filter(x=>x.type==='file'&&/\.(md|markdown)$/i.test(x.name)).map(x=>({...x,date:dateFromName(x.name),title:cleanName(x.name)})).sort((a,b)=>(b.date||b.name).localeCompare(a.date||a.name))}
-function homeList(list){const groups={};list.forEach(f=>{const y=(f.date||'Undated').slice(0,4);(groups[y]??=[]).push(f)});return Object.keys(groups).sort().reverse().map(y=>`<div class="year">${esc(y)}</div><div class="list">${groups[y].map(f=>`<a class="item" data-search="${esc((f.title+' '+f.date+' '+f.name).toLowerCase())}" href="#/note/${encodeURIComponent(f.path)}"><span class="date">${esc(f.date||'Date preserved in source')}</span><span class="title">${esc(f.title)}</span><span class="arrow">›</span></a>`).join('')}</div>`).join('')}
-async function home(){progress.style.width='0';app.innerHTML='<div class="loading">正在读取公开记录…</div>';try{const list=await files();document.title=C.siteTitle;app.innerHTML=`<section class="hero"><div class="eyebrow">Public Research Archive</div><h1>${esc(C.siteTitle)}</h1><p>${esc(C.siteSubtitle)}</p></section><div class="toolbar"><input id="q" class="search" placeholder="搜索标题或日期" aria-label="搜索"><span class="count">${list.length} records</span></div><div id="records">${homeList(list)}</div>`;document.getElementById('q').addEventListener('input',e=>{const q=e.target.value.toLowerCase().trim();document.querySelectorAll('.item').forEach(el=>el.style.display=el.dataset.search.includes(q)?'grid':'none')})}catch(e){app.innerHTML=`<div class="error">${esc(e.message)}</div>`}}
-function citationFormats(title,published,url,sha,immutable){const year=(published||'').slice(0,4);return{plain:`Tu, Xufen. “${title}.” Human Observation Notes, ${published}. ${url}`,apa:`Tu, X. (${year}). ${title}. Human Observation Notes. ${url}`,bibtex:`@misc{tu${year}${sha.slice(0,7)},\n  author = {Xufen Tu},\n  title = {${title.replace(/[{}]/g,'')}},\n  year = {${year}},\n  url = {${url}},\n  note = {Immutable source: ${immutable}}\n}`}}
-async function copy(text,button){await navigator.clipboard.writeText(text);const old=button.textContent;button.textContent='已复制';setTimeout(()=>button.textContent=old,1400)}
-async function note(path){app.innerHTML='<div class="loading">正在读取文章…</div>';try{const enc=path.split('/').map(encodeURIComponent).join('/');const [fr,cr]=await Promise.all([fetch(`${api}/contents/${enc}?ref=${C.branch}`),fetch(`${api}/commits?path=${encodeURIComponent(path)}&per_page=100`)]);if(!fr.ok)throw new Error('文章不存在。');const fd=await fr.json(),md=decodeURIComponent(escape(atob(fd.content.replace(/\n/g,'')))),{meta,body}=parseFM(md);const title=titleOf(md,cleanName(path.split('/').pop())),fileDate=meta.date||dateFromName(path.split('/').pop()),commits=cr.ok?await cr.json():[],latest=commits[0],first=commits[commits.length-1],published=(fileDate||first?.commit?.author?.date||'').slice(0,10),updated=(latest?.commit?.author?.date||published).slice(0,10),commit=latest?.sha||fd.sha,immutable=`https://github.com/${C.owner}/${C.repo}/blob/${commit}/${path}`,source=`https://github.com/${C.owner}/${C.repo}/blob/${C.branch}/${path}`,history=`https://github.com/${C.owner}/${C.repo}/commits/${C.branch}/${path}`,canonical=`${C.siteUrl}/#/note/${encodeURIComponent(path)}`,hash=await sha256(md),minutes=readingMinutes(body),html=marked.parse(fixImages(body,path)),cites=citationFormats(title,published,canonical,commit,immutable),saved=JSON.parse(localStorage.getItem('hon-reading')||'{}')[path];document.title=`${title} — ${C.siteTitle}`;app.innerHTML=`<a class="back" href="#/">← 返回全部记录</a>${saved?.percent>5&&saved.percent<95?`<div class="continue">上次阅读到约 ${saved.percent}% · 页面将自动回到上次位置</div>`:''}<article class="article"><header class="article-header"><h1>${esc(title)}</h1><div class="meta"><span>Published ${esc(published||'Date preserved in source')}</span>${updated&&updated!==published?`<span>Updated ${esc(updated)}</span>`:''}<span>${minutes} min read</span><span>${esc(C.author)}</span></div></header><div class="content">${html}</div><section class="evidence"><div class="evidence-head"><h2>Source & Citation</h2><span class="status">Public · Versioned</span></div><div class="evidence-grid"><strong>Original record</strong><span>${esc(path)}</span><strong>Published</strong><span>${esc(published||'Preserved in source')}</span><strong>Latest commit</strong><span class="mono">${esc(commit.slice(0,12))}</span><strong>SHA-256</strong><span class="mono">${esc(hash)}</span><strong>Canonical URL</strong><span class="mono">${esc(canonical)}</span></div><div class="actions"><a class="button" href="${source}" target="_blank" rel="noopener">原始文件</a><a class="button" href="${history}" target="_blank" rel="noopener">修改历史</a><a class="button" href="${immutable}" target="_blank" rel="noopener">固定版本</a><button class="button" id="copy-plain">复制引用</button><button class="button" id="copy-apa">APA</button><button class="button" id="copy-bib">BibTeX</button><button class="button" onclick="window.print()">打印 / PDF</button></div></section></article>`;document.getElementById('copy-plain').onclick=e=>copy(cites.plain,e.currentTarget);document.getElementById('copy-apa').onclick=e=>copy(cites.apa,e.currentTarget);document.getElementById('copy-bib').onclick=e=>copy(cites.bibtex,e.currentTarget);jsonLd({title,published,updated,canonical,source});if(saved?.y)setTimeout(()=>scrollTo(0,saved.y),100)}catch(e){app.innerHTML=`<div class="error">${esc(e.message)}<br><a href="#/">返回首页</a></div>`}}
-function jsonLd(x){document.querySelectorAll('script[data-jsonld]').forEach(n=>n.remove());const s=document.createElement('script');s.type='application/ld+json';s.dataset.jsonld='1';s.textContent=JSON.stringify({'@context':'https://schema.org','@type':'Article',headline:x.title,datePublished:x.published,dateModified:x.updated,author:{'@type':'Person',name:C.author,url:C.authorUrl},mainEntityOfPage:x.canonical,url:x.canonical,isBasedOn:x.source,publisher:{'@type':'Person',name:C.author}});document.head.appendChild(s)}
-function route(){const h=location.hash||'#/';if(h.startsWith('#/note/'))note(decodeURIComponent(h.slice(7)));else home()}
-window.addEventListener('scroll',()=>{const h=location.hash;if(!h.startsWith('#/note/'))return;const max=document.documentElement.scrollHeight-innerHeight,p=max>0?Math.round(scrollY/max*100):0;progress.style.width=`${p}%`;const path=decodeURIComponent(h.slice(7)),all=JSON.parse(localStorage.getItem('hon-reading')||'{}');all[path]={y:scrollY,percent:p,at:Date.now()};localStorage.setItem('hon-reading',JSON.stringify(all))},{passive:true});
-window.addEventListener('hashchange',()=>{scrollTo(0,0);route()});route();
-})();
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Xufen Tu 的长期人类观察记录：人类判断、责任、验证与 AI 介入环境中的决策变化。">
+  <link rel="canonical" href="https://observations.xufentu.com/">
+  <title>Human Observation Notes — Xufen Tu</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="reading-progress" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#/" aria-label="返回首页">
+      <span class="brand-title">Human Observation Notes</span>
+      <span class="brand-author">Xufen Tu</span>
+    </a>
+    <nav class="topnav">
+      <a href="#/">观察记录</a>
+      <a href="https://github.com/xufentu-creator/human-observation-notes" target="_blank" rel="noopener">原始仓库</a>
+    </nav>
+  </header>
+  <main id="app" class="shell" aria-live="polite">
+    <div class="loading">正在读取公开记录…</div>
+  </main>
+  <footer class="footer">
+    <span>Independent Interdisciplinary Research</span>
+    <span>Human Judgment · Responsibility · Verification</span>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
