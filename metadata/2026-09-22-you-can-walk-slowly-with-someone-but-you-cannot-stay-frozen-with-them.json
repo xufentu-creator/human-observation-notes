@@ -1,0 +1,23 @@
+{
+  "record_id": "HOR-2026-09-22-001",
+  "record_type": "human_observation",
+  "author": "Xufen Tu",
+  "record_date": "2026-09-22",
+  "published_at": "2026-09-22",
+  "updated_at": null,
+  "title": "可以陪一个人走慢一点，但不能陪他停在原地",
+  "domains": [
+    "Human Judgment",
+    "Love",
+    "Responsibility Boundaries"
+  ],
+  "problem_type": "one_sided_responsibility_in_relationships",
+  "observation": "Affection and love can be cultivated, but long-term one-sided help becomes exhausting when the other person refuses to listen, change, or move forward.",
+  "current_judgment": "A person can support someone who is willing to grow, but should not carry responsibility for someone who persistently refuses to act.",
+  "judgment_status": "current",
+  "human_required": true,
+  "boundary": "Helping another person should not become long-term substitution for that person's own judgment, growth, or responsibility.",
+  "evidence_type": "real_world_observation",
+  "outcome_status": "open",
+  "canonical_url": "https://observations.xufentu.com/observations/2026-09-22-you-can-walk-slowly-with-someone-but-you-cannot-stay-frozen-with-them/"
+}
