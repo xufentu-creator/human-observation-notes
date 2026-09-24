@@ -1,0 +1,23 @@
+{
+  "record_id": "HOR-2026-09-24-001",
+  "record_type": "human_observation",
+  "author": "Xufen Tu",
+  "record_date": "2026-09-24",
+  "published_at": "2026-09-24",
+  "updated_at": null,
+  "title": "不要为了数据好看，失去真实的自己",
+  "domains": [
+    "Human Judgment",
+    "Authenticity",
+    "Data Pressure"
+  ],
+  "problem_type": "authenticity_under_data_evaluation",
+  "observation": "As communication, emotion, and interpersonal reactions become recorded and interpretable as data, people may feel pressure to perform stability, kindness, or pleasing behavior for future evaluation.",
+  "current_judgment": "A person should take responsibility for expression without performing false kindness or losing authenticity in order to satisfy records, systems, or data interpretation.",
+  "judgment_status": "current",
+  "human_required": true,
+  "boundary": "Records should not define a person's whole identity, and data pressure should not force people to suppress real feelings, boundaries, or authentic judgment.",
+  "evidence_type": "long_term_research_observation",
+  "outcome_status": "open",
+  "canonical_url": "https://observations.xufentu.com/observations/2026-09-24-do-not-lose-the-real-self-just-to-look-good-in-data/"
+}
