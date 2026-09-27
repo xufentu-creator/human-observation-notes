@@ -1,0 +1,23 @@
+{
+  "record_id": "HOR-2026-09-26-001",
+  "record_type": "human_observation",
+  "author": "Xufen Tu",
+  "record_date": "2026-09-26",
+  "published_at": "2026-09-26",
+  "updated_at": null,
+  "title": "善意一旦开始组织，就开始产生责任",
+  "domains": [
+    "Human Judgment",
+    "Responsibility Boundaries",
+    "Social Trust"
+  ],
+  "problem_type": "goodwill_becoming_organized_responsibility",
+  "observation": "When personal goodwill becomes organized social action, expectations, interpretations, and responsibility boundaries emerge among participants.",
+  "current_judgment": "Goodwill should remain voluntary and bounded; organizing care for others requires clear expectations so responsibility does not silently shift onto one person.",
+  "judgment_status": "current",
+  "human_required": true,
+  "boundary": "An organizer can offer space, care, and opportunity, but should not absorb responsibility for each participant's choices, responses, or participation.",
+  "evidence_type": "real_world_observation",
+  "outcome_status": "open",
+  "canonical_url": "https://observations.xufentu.com/observations/2026-09-26-once-goodwill-becomes-organized-it-begins-to-create-responsibility/"
+}
