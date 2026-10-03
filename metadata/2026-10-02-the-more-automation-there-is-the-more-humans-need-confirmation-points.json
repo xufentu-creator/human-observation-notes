@@ -1,0 +1,23 @@
+{
+  "record_id": "HOR-2026-10-02-001",
+  "record_type": "human_observation",
+  "author": "Xufen Tu",
+  "record_date": "2026-10-02",
+  "published_at": "2026-10-02",
+  "updated_at": null,
+  "title": "自动化越多，人越需要保留自己的确认环节",
+  "domains": [
+    "Human Judgment",
+    "Automation Risk",
+    "Digital Identity"
+  ],
+  "problem_type": "automation_without_human_confirmation",
+  "observation": "When accounts, phone numbers, third-party permissions, automated code, paid tools, and deployment platforms become mixed together, ordinary users may lose track of what has been authorized, changed, connected, or paid for.",
+  "current_judgment": "AI and automation can accelerate work, but humans need clear confirmation points, rollback paths, and the ability to understand and stop consequential actions.",
+  "judgment_status": "current",
+  "human_required": true,
+  "boundary": "Automation should not proceed in ways that remove human understanding, meaningful confirmation, account control, permission awareness, or the ability to stop and repair.",
+  "evidence_type": "real_world_observation",
+  "outcome_status": "open",
+  "canonical_url": "https://observations.xufentu.com/observations/2026-10-02-the-more-automation-there-is-the-more-humans-need-confirmation-points/"
+}
