@@ -1,0 +1,25 @@
+{
+  "record_id": "HOR-2026-10-03-002",
+  "record_type": "human_observation",
+  "author": "Xufen Tu",
+  "record_date": "2026-10-03",
+  "published_at": "2026-10-03",
+  "updated_at": null,
+  "title": "当航空展成为公共空间里的技术体验",
+  "domains": [
+    "Human Judgment",
+    "Technology",
+    "Public Space",
+    "Shared Attention",
+    "Complex Systems"
+  ],
+  "problem_type": "airshow_as_public_technology_experience",
+  "observation": "During a public airshow by the ocean, aircraft appeared intermittently rather than all at once; each arrival drew people's attention upward and temporarily turned an ordinary hot beach scene into a shared public technology experience.",
+  "current_judgment": "When powerful aviation technology enters public space through performance, speed, and sound, it should be understood not only as a technical display but also as something that shapes public emotion, shared attention, imagination, trust, and responsibility.",
+  "judgment_status": "current",
+  "human_required": true,
+  "boundary": "This record preserves a public observation and current judgment from a specific scene; it should not be treated as a complete conclusion or a full representation of the author.",
+  "evidence_type": "real_world_observation",
+  "outcome_status": "open",
+  "canonical_url": "https://observations.xufentu.com/observations/2026-10-03-when-an-airshow-becomes-a-public-technology-experience/"
+}
