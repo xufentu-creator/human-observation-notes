@@ -1,0 +1,23 @@
+{
+  "record_id": "HOR-2026-10-05-001",
+  "record_type": "human_observation",
+  "author": "Xufen Tu",
+  "record_date": "2026-10-05",
+  "published_at": "2026-10-05",
+  "updated_at": null,
+  "title": "当系统记录的状态和人的真实意图不一样",
+  "domains": [
+    "Human Judgment",
+    "Complex Systems",
+    "Responsibility Boundaries"
+  ],
+  "problem_type": "system_state_and_human_intent_mismatch",
+  "observation": "An input error during insurance renewal was followed by a system state that prevented the author from continuing the renewal process, although the intention to renew and pay had not changed. The outcome was not yet known at the time of the observation.",
+  "current_judgment": "A recorded operation does not necessarily represent a person's decision. When a system state approaches consequential outcomes, people should retain the ability to understand, confirm, stop, and correct what is happening.",
+  "judgment_status": "current",
+  "human_required": true,
+  "boundary": "This is an observation in progress. It does not establish the technical cause, a final insurance outcome, or legal responsibility, and later results should not overwrite the original observation.",
+  "evidence_type": "real_world_observation",
+  "outcome_status": "open",
+  "canonical_url": "https://observations.xufentu.com/observations/2026-10-05-system-state-human-intent-and-consequential-boundaries/"
+}
