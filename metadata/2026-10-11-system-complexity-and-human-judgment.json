@@ -1,0 +1,23 @@
+{
+  "record_id": "HOR-2026-10-11-001",
+  "record_type": "human_observation",
+  "author": "Xufen Tu",
+  "record_date": "2026-10-11",
+  "published_at": "2026-10-11",
+  "updated_at": null,
+  "title": "当系统越来越复杂，人却越来越难理解",
+  "domains": [
+    "Human Judgment",
+    "Structural Stability",
+    "Responsibility Boundaries"
+  ],
+  "problem_type": "system_complexity_and_loss_of_human_understanding",
+  "observation": "During a day of AI-assisted development, repeated modifications made it harder for the author to distinguish necessary functions, verified fixes, and changes introduced in response to earlier problems. Not all technical issues had been resolved.",
+  "current_judgment": "System maturity should include clarity, stability, traceability, and complexity that people can understand and maintain. Meaningful human confirmation requires understanding what is being decided and retaining the ability to proceed or stop.",
+  "judgment_status": "current",
+  "human_required": true,
+  "boundary": "This is a public observation from one development experience, not proof that smaller systems are always better or a complete solution. It does not disclose implementation procedures or establish automatic responsibility.",
+  "evidence_type": "real_world_observation",
+  "outcome_status": "open",
+  "canonical_url": "https://observations.xufentu.com/observations/2026-10-11-system-complexity-and-human-judgment/"
+}
